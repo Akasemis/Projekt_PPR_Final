@@ -62,5 +62,14 @@ namespace Frontendowa_aplikacja
                 id_var.Text = id_var.Text.Remove(id_var.Text.Length - 1);
             }
         }
+
+        private void dodatek_var_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(dodatek_var.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Podaj prawidłową liczbę!");
+                dodatek_var.Text = dodatek_var.Text.Remove(dodatek_var.Text.Length - 1);
+            }
+        }
     }
 }

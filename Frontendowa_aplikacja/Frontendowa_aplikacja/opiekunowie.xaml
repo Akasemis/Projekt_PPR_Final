@@ -11,7 +11,7 @@
         <Label x:Name="id1" Content="ID: " HorizontalAlignment="Left" Height="40" Margin="263,22,0,0" VerticalAlignment="Top" Width="66" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16"/>
         <Label x:Name="rasa" Content="Dodatek: " HorizontalAlignment="Left" Height="40" Margin="248,67,0,0" VerticalAlignment="Top" Width="81" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16"/>
         <TextBox x:Name="id_var" HorizontalAlignment="Left" Height="23" Margin="330,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" FontSize="16" TextChanged="id_var_TextChanged"/>
-        <TextBox x:Name="dodatek_var" HorizontalAlignment="Left" Height="23" Margin="330,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" FontSize="16"/>
+        <TextBox x:Name="dodatek_var" HorizontalAlignment="Left" Height="23" Margin="330,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" FontSize="16" TextChanged="dodatek_var_TextChanged"/>
         <Button x:Name="mod" Content="Modyfkuj pensję" HorizontalAlignment="Left" Height="22" Margin="309,112,0,0" VerticalAlignment="Top" Width="100" Click="mod_Click"/>
     </Grid>
 </Window>
