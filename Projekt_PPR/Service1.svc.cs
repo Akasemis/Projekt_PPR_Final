@@ -28,6 +28,35 @@ namespace Projekt_PPR
             int ile = Baza.Oddane.Count();
             return ile;
         }
+        public int ile_opieuknow()
+        {
+            int ile = Baza.Opiekunowie.Count();
+            return ile;
+        }
+
+        public int zwroc_id_opiekuna(int var)
+        {
+            Opiekun = Baza.Opiekunowie.Find(var);
+            return Opiekun.ID_opiekuna;
+        }
+        
+        public string zwroc_imie_opiekuna(int var)
+        {
+            Opiekun = Baza.Opiekunowie.Find(var);
+            return Opiekun.imie;
+        }
+
+        public string zwroc_nazwisko_opiekuna(int var)
+        {
+            Opiekun = Baza.Opiekunowie.Find(var);
+            return Opiekun.nazwisko;
+        }
+
+        public int? zwroc_pensje_opiekuna(int var)
+        {
+            Opiekun = Baza.Opiekunowie.Find(var);
+            return Opiekun.pensja;
+        }
         public int wczytaj_id(int var)
         {
             Zwierze = Baza.Zwierzaki.Find(var);
@@ -102,7 +131,13 @@ namespace Projekt_PPR
             Baza.SaveChanges();
             return 0;
         }
-
+        public int modyfikuj_pensje(int id, int kwota)
+        {
+            Opiekun = Baza.Opiekunowie.Find(id);
+            Opiekun.pensja += kwota;
+            Baza.SaveChanges();
+            return 0;
+        }
 
 
 

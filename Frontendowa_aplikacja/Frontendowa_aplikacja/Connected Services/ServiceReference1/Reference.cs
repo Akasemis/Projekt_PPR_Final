@@ -168,6 +168,42 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_date", ReplyAction="http://tempuri.org/IService1/zwroc_dateResponse")]
         System.Threading.Tasks.Task<System.DateTime> zwroc_dateAsync(int var);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_id_opiekuna", ReplyAction="http://tempuri.org/IService1/zwroc_id_opiekunaResponse")]
+        int zwroc_id_opiekuna(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_id_opiekuna", ReplyAction="http://tempuri.org/IService1/zwroc_id_opiekunaResponse")]
+        System.Threading.Tasks.Task<int> zwroc_id_opiekunaAsync(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_imie_opiekuna", ReplyAction="http://tempuri.org/IService1/zwroc_imie_opiekunaResponse")]
+        string zwroc_imie_opiekuna(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_imie_opiekuna", ReplyAction="http://tempuri.org/IService1/zwroc_imie_opiekunaResponse")]
+        System.Threading.Tasks.Task<string> zwroc_imie_opiekunaAsync(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_nazwisko_opiekuna", ReplyAction="http://tempuri.org/IService1/zwroc_nazwisko_opiekunaResponse")]
+        string zwroc_nazwisko_opiekuna(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_nazwisko_opiekuna", ReplyAction="http://tempuri.org/IService1/zwroc_nazwisko_opiekunaResponse")]
+        System.Threading.Tasks.Task<string> zwroc_nazwisko_opiekunaAsync(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_pensje_opiekuna", ReplyAction="http://tempuri.org/IService1/zwroc_pensje_opiekunaResponse")]
+        System.Nullable<int> zwroc_pensje_opiekuna(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_pensje_opiekuna", ReplyAction="http://tempuri.org/IService1/zwroc_pensje_opiekunaResponse")]
+        System.Threading.Tasks.Task<System.Nullable<int>> zwroc_pensje_opiekunaAsync(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ile_opieuknow", ReplyAction="http://tempuri.org/IService1/ile_opieuknowResponse")]
+        int ile_opieuknow();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ile_opieuknow", ReplyAction="http://tempuri.org/IService1/ile_opieuknowResponse")]
+        System.Threading.Tasks.Task<int> ile_opieuknowAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/modyfikuj_pensje", ReplyAction="http://tempuri.org/IService1/modyfikuj_pensjeResponse")]
+        int modyfikuj_pensje(int id, int kwota);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/modyfikuj_pensje", ReplyAction="http://tempuri.org/IService1/modyfikuj_pensjeResponse")]
+        System.Threading.Tasks.Task<int> modyfikuj_pensjeAsync(int id, int kwota);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         Frontendowa_aplikacja.ServiceReference1.CompositeType GetDataUsingDataContract(Frontendowa_aplikacja.ServiceReference1.CompositeType composite);
         
@@ -320,6 +356,54 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
         
         public System.Threading.Tasks.Task<System.DateTime> zwroc_dateAsync(int var) {
             return base.Channel.zwroc_dateAsync(var);
+        }
+        
+        public int zwroc_id_opiekuna(int var) {
+            return base.Channel.zwroc_id_opiekuna(var);
+        }
+        
+        public System.Threading.Tasks.Task<int> zwroc_id_opiekunaAsync(int var) {
+            return base.Channel.zwroc_id_opiekunaAsync(var);
+        }
+        
+        public string zwroc_imie_opiekuna(int var) {
+            return base.Channel.zwroc_imie_opiekuna(var);
+        }
+        
+        public System.Threading.Tasks.Task<string> zwroc_imie_opiekunaAsync(int var) {
+            return base.Channel.zwroc_imie_opiekunaAsync(var);
+        }
+        
+        public string zwroc_nazwisko_opiekuna(int var) {
+            return base.Channel.zwroc_nazwisko_opiekuna(var);
+        }
+        
+        public System.Threading.Tasks.Task<string> zwroc_nazwisko_opiekunaAsync(int var) {
+            return base.Channel.zwroc_nazwisko_opiekunaAsync(var);
+        }
+        
+        public System.Nullable<int> zwroc_pensje_opiekuna(int var) {
+            return base.Channel.zwroc_pensje_opiekuna(var);
+        }
+        
+        public System.Threading.Tasks.Task<System.Nullable<int>> zwroc_pensje_opiekunaAsync(int var) {
+            return base.Channel.zwroc_pensje_opiekunaAsync(var);
+        }
+        
+        public int ile_opieuknow() {
+            return base.Channel.ile_opieuknow();
+        }
+        
+        public System.Threading.Tasks.Task<int> ile_opieuknowAsync() {
+            return base.Channel.ile_opieuknowAsync();
+        }
+        
+        public int modyfikuj_pensje(int id, int kwota) {
+            return base.Channel.modyfikuj_pensje(id, kwota);
+        }
+        
+        public System.Threading.Tasks.Task<int> modyfikuj_pensjeAsync(int id, int kwota) {
+            return base.Channel.modyfikuj_pensjeAsync(id, kwota);
         }
         
         public Frontendowa_aplikacja.ServiceReference1.CompositeType GetDataUsingDataContract(Frontendowa_aplikacja.ServiceReference1.CompositeType composite) {

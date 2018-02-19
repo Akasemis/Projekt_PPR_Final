@@ -131,5 +131,11 @@ namespace Frontendowa_aplikacja
             historia historia = new historia();
             historia.Show();
         }
+
+        private void opiekunowie_Click(object sender, RoutedEventArgs e)
+        {
+            opiekunowie opiekunowie = new opiekunowie();
+            opiekunowie.Show();
+        }
     }
 }

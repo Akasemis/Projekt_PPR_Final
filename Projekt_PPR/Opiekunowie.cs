@@ -20,5 +20,14 @@ namespace Projekt_PPR
         public string nazwisko { get; set; }
 
         public int? pensja { get; set; }
+
+
+        public void nowy_opiekun(int ID_opiekuna, string imie, string nazwisko, int pensja)
+        {
+            this.ID_opiekuna = ID_opiekuna;
+            this.imie = imie;
+            this.nazwisko = nazwisko;
+            this.pensja = pensja;
+        }
     }
 }

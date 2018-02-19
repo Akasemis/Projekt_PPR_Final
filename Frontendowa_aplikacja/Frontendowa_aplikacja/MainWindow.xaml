@@ -27,5 +27,6 @@
         <Label x:Name="opiekun_t" Content="Opiekun:" HorizontalAlignment="Left" Height="40" Margin="117.4,366,0,0" VerticalAlignment="Top" Width="128" FontSize="16" Grid.Column="1"/>
         <Button x:Name="adoptuj" Content="Zwierzak adoptowany" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="167" Height="25" Click="adoptuj_Click" Background="#FFE27272"/>
         <Button x:Name="Historia" Content="Historia adopcji" HorizontalAlignment="Left" Margin="335,115,0,0" VerticalAlignment="Top" Width="115" Height="20" Click="Historia_Click" Grid.Column="1"/>
+        <Button x:Name="opiekunowie" Content="Lista opiekunów" HorizontalAlignment="Left" Margin="35,266,0,0" VerticalAlignment="Top" Width="115" Height="20" Click="opiekunowie_Click"/>
     </Grid>
 </Window>

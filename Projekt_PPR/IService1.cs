@@ -42,7 +42,19 @@ namespace Projekt_PPR
         int dodaj_historie(int id, string rasa, DateTime data);
         [OperationContract]
         DateTime zwroc_date(int var);
-
+        [OperationContract]
+        int zwroc_id_opiekuna(int var);
+        [OperationContract]
+        string zwroc_imie_opiekuna(int var);
+        [OperationContract]
+        string zwroc_nazwisko_opiekuna(int var);
+        [OperationContract]
+        int? zwroc_pensje_opiekuna(int var);
+        [OperationContract]
+        int ile_opieuknow();
+        [OperationContract]
+        int modyfikuj_pensje(int id, int kwota);
+        [OperationContract]
         string GetData(int value);
 
         [OperationContract]
