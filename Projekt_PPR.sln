@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontendowa_aplikacja", "Frontendowa_aplikacja\Frontendowa_aplikacja\Frontendowa_aplikacja.csproj", "{DA5DE3CD-1C5E-4576-A651-33C105ABE11F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0C49242C-7538-4642-82F6-83561A7FA988} = {0C49242C-7538-4642-82F6-83561A7FA988}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projekt_PPR", "Projekt_PPR\Projekt_PPR.csproj", "{0C49242C-7538-4642-82F6-83561A7FA988}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA5DE3CD-1C5E-4576-A651-33C105ABE11F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA5DE3CD-1C5E-4576-A651-33C105ABE11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA5DE3CD-1C5E-4576-A651-33C105ABE11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA5DE3CD-1C5E-4576-A651-33C105ABE11F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C49242C-7538-4642-82F6-83561A7FA988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C49242C-7538-4642-82F6-83561A7FA988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C49242C-7538-4642-82F6-83561A7FA988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C49242C-7538-4642-82F6-83561A7FA988}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3E5C09B-D304-495A-B8A2-43CA6DE9C6DB}
+	EndGlobalSection
+EndGlobal
