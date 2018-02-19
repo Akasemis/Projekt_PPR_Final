@@ -5,23 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Frontendowa_aplikacja"
         mc:Ignorable="d"
-        Title="MainWindow" Height="472.061" Width="700">
+        Title="Aplikacja adoptowania zwierzaków" Height="472.061" Width="700">
     <Grid Margin="0,0,21.4,-0.2">
-        <Label x:Name="imie" Content="Imię: " HorizontalAlignment="Left" Height="40" Margin="236,201,0,0" VerticalAlignment="Top" Width="88" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16"/>
-        <Label x:Name="rasa" Content="Rasa: " HorizontalAlignment="Left" Height="40" Margin="236,246,0,0" VerticalAlignment="Top" Width="88" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16"/>
-        <Label x:Name="wiek" Content="Wiek: " HorizontalAlignment="Left" Height="40" Margin="236,286,0,0" VerticalAlignment="Top" Width="88" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16"/>
-        <Label x:Name="kontakt" Content="Kontakt: " HorizontalAlignment="Left" Height="40" Margin="236,326,0,0" VerticalAlignment="Top" Width="88" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16"/>
-        <Button x:Name="Button_next" Content="Następny" HorizontalAlignment="Left" Height="34" Margin="547,219,0,0" VerticalAlignment="Top" Width="115" Click="zwierzak_next"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="212*"/>
+            <ColumnDefinition Width="461*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="imie" Content="Imię: " HorizontalAlignment="Left" Height="40" Margin="24.4,201,0,0" VerticalAlignment="Top" Width="88" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16" Grid.Column="1"/>
+        <Label x:Name="rasa" Content="Rasa: " HorizontalAlignment="Left" Height="40" Margin="24.4,246,0,0" VerticalAlignment="Top" Width="88" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16" Grid.Column="1"/>
+        <Label x:Name="wiek" Content="Wiek: " HorizontalAlignment="Left" Height="40" Margin="24.4,286,0,0" VerticalAlignment="Top" Width="88" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16" Grid.Column="1"/>
+        <Label x:Name="kontakt" Content="Kontakt: " HorizontalAlignment="Left" Height="40" Margin="24.4,326,0,0" VerticalAlignment="Top" Width="88" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16" Grid.Column="1"/>
+        <Button x:Name="Button_next" Content="Następny" HorizontalAlignment="Left" Height="34" Margin="335.4,219,0,0" VerticalAlignment="Top" Width="115" Click="zwierzak_next" Grid.Column="1"/>
         <Button x:Name="Button_prev" Content="Poprzedni" Height="34" Margin="35,219,0,0" VerticalAlignment="Top" Click="zwierzak_prev" HorizontalAlignment="Left" Width="115"/>
-        <Label x:Name="imie_t" Content="Imię: " HorizontalAlignment="Left" Height="40" Margin="329,201,0,0" VerticalAlignment="Top" Width="128" FontSize="16"/>
-        <Label x:Name="rasa_t" Content="Rasa: " HorizontalAlignment="Left" Height="40" Margin="329,246,0,0" VerticalAlignment="Top" Width="128" FontSize="16"/>
-        <Label x:Name="wiek_t" Content="Wiek: " HorizontalAlignment="Left" Height="40" Margin="329,286,0,0" VerticalAlignment="Top" Width="128" FontSize="16"/>
-        <Label x:Name="kontakt_t" Content="Kontakt: " HorizontalAlignment="Left" Height="40" Margin="329,326,0,0" VerticalAlignment="Top" Width="128" FontSize="16"/>
-        <Image x:Name="img" HorizontalAlignment="Left" Height="152" Margin="258,24,0,0" VerticalAlignment="Top" Width="169" Source="zdj/1.jpg"/>
-        <Button x:Name="dodawanie" Content="Dodaj nowe zwierzę" HorizontalAlignment="Left" Margin="547,42,0,0" VerticalAlignment="Top" Width="115" Height="68" Click="dodawanie_Click"/>
-        <Label x:Name="opiekun" Content="Opiekun:" HorizontalAlignment="Left" Height="40" Margin="236,366,0,0" VerticalAlignment="Top" Width="88" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16"/>
-        <Label x:Name="opiekun_t" Content="Opiekun:" HorizontalAlignment="Left" Height="40" Margin="329,366,0,0" VerticalAlignment="Top" Width="128" FontSize="16"/>
+        <Label x:Name="imie_t" Content="Imię: " HorizontalAlignment="Left" Height="40" Margin="117.4,201,0,0" VerticalAlignment="Top" Width="128" FontSize="16" Grid.Column="1"/>
+        <Label x:Name="rasa_t" Content="Rasa: " HorizontalAlignment="Left" Height="40" Margin="117.4,246,0,0" VerticalAlignment="Top" Width="128" FontSize="16" Grid.Column="1"/>
+        <Label x:Name="wiek_t" Content="Wiek: " HorizontalAlignment="Left" Height="40" Margin="117.4,286,0,0" VerticalAlignment="Top" Width="128" FontSize="16" Grid.Column="1"/>
+        <Label x:Name="kontakt_t" Content="Kontakt: " HorizontalAlignment="Left" Height="40" Margin="117.4,326,0,0" VerticalAlignment="Top" Width="128" FontSize="16" Grid.Column="1"/>
+        <Image x:Name="img" HorizontalAlignment="Left" Height="152" Margin="46.4,24,0,0" VerticalAlignment="Top" Width="169" Source="zdj/1.jpg" Stretch="UniformToFill" Grid.Column="1"/>
+        <Button x:Name="dodawanie" Content="Dodaj nowe zwierzę" HorizontalAlignment="Left" Margin="335.4,42,0,0" VerticalAlignment="Top" Width="115" Height="68" Click="dodawanie_Click" Grid.Column="1"/>
+        <Label x:Name="opiekun" Content="Opiekun:" HorizontalAlignment="Left" Height="40" Margin="24.4,366,0,0" VerticalAlignment="Top" Width="88" TextOptions.TextHintingMode="Animated" FontWeight="Bold" HorizontalContentAlignment="Right" FontSize="16" Grid.Column="1"/>
+        <Label x:Name="opiekun_t" Content="Opiekun:" HorizontalAlignment="Left" Height="40" Margin="117.4,366,0,0" VerticalAlignment="Top" Width="128" FontSize="16" Grid.Column="1"/>
         <Button x:Name="adoptuj" Content="Zwierzak adoptowany" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="167" Height="25" Click="adoptuj_Click" Background="#FFE27272"/>
-        <Label x:Name="stan_t" Content="stan" HorizontalAlignment="Left" Height="36" Margin="44,154,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Historia" Content="Historia adopcji" HorizontalAlignment="Left" Margin="335,115,0,0" VerticalAlignment="Top" Width="115" Height="20" Click="Historia_Click" Grid.Column="1"/>
     </Grid>
 </Window>

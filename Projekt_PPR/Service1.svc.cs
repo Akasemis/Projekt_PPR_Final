@@ -16,10 +16,16 @@ namespace Projekt_PPR
     {
         Model1 Baza = new Model1();
         Zwierzaki Zwierze = new Zwierzaki();
-
+        Oddane Historia = new Oddane();
+        Opiekunowie Opiekun = new Opiekunowie();
         public int ile_wierszy()
         {
             int ile = Baza.Zwierzaki.Count();
+            return ile;
+        }
+        public int ile_historii()
+        {
+            int ile = Baza.Oddane.Count();
             return ile;
         }
         public int wczytaj_id(int var)
@@ -67,7 +73,28 @@ namespace Projekt_PPR
             Baza.SaveChanges();
             return 0;
         }
-
+        public int zwroc_id_operacji(int var)
+        {
+            Historia = Baza.Oddane.Find(var);
+            return Historia.ID_operacji;
+        }
+        public string zwroc_rase_operacji(int var)
+        {
+            Historia = Baza.Oddane.Find(var);
+            return Historia.rasa;
+        }
+        public DateTime zwroc_date(int var)
+        {
+            Historia = Baza.Oddane.Find(var);
+            return Historia.data;
+        }
+        public int dodaj_historie(int id, string rasa, DateTime data)
+        {
+            Historia.nowa_historia(id, rasa, data);
+            Baza.Oddane.Add(Historia);
+            Baza.SaveChanges();
+            return 0;
+        }
         public int modyfikuj_zwierzaka(int id)
         {
             Zwierze = Baza.Zwierzaki.Find(id);
@@ -75,6 +102,8 @@ namespace Projekt_PPR
             Baza.SaveChanges();
             return 0;
         }
+
+
 
 
 

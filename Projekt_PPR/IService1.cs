@@ -15,6 +15,8 @@ namespace Projekt_PPR
         [OperationContract]
         int ile_wierszy();
         [OperationContract]
+        int ile_historii();
+        [OperationContract]
         int wczytaj_id(int var);
         [OperationContract]
         string zwroc_imie(int var);
@@ -32,6 +34,15 @@ namespace Projekt_PPR
         int dodaj_zwierzaka(int id, string imie, string rasa, int? wiek, string kontakt, string zdj, int? opiekun);
         [OperationContract]
         int modyfikuj_zwierzaka(int id);
+        [OperationContract]
+        int zwroc_id_operacji(int var);
+        [OperationContract]
+        string zwroc_rase_operacji(int var);
+        [OperationContract]
+        int dodaj_historie(int id, string rasa, DateTime data);
+        [OperationContract]
+        DateTime zwroc_date(int var);
+
         string GetData(int value);
 
         [OperationContract]

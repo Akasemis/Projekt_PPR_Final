@@ -84,6 +84,12 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ile_wierszy", ReplyAction="http://tempuri.org/IService1/ile_wierszyResponse")]
         System.Threading.Tasks.Task<int> ile_wierszyAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ile_historii", ReplyAction="http://tempuri.org/IService1/ile_historiiResponse")]
+        int ile_historii();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ile_historii", ReplyAction="http://tempuri.org/IService1/ile_historiiResponse")]
+        System.Threading.Tasks.Task<int> ile_historiiAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/wczytaj_id", ReplyAction="http://tempuri.org/IService1/wczytaj_idResponse")]
         int wczytaj_id(int var);
         
@@ -138,6 +144,30 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/modyfikuj_zwierzaka", ReplyAction="http://tempuri.org/IService1/modyfikuj_zwierzakaResponse")]
         System.Threading.Tasks.Task<int> modyfikuj_zwierzakaAsync(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_id_operacji", ReplyAction="http://tempuri.org/IService1/zwroc_id_operacjiResponse")]
+        int zwroc_id_operacji(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_id_operacji", ReplyAction="http://tempuri.org/IService1/zwroc_id_operacjiResponse")]
+        System.Threading.Tasks.Task<int> zwroc_id_operacjiAsync(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_rase_operacji", ReplyAction="http://tempuri.org/IService1/zwroc_rase_operacjiResponse")]
+        string zwroc_rase_operacji(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_rase_operacji", ReplyAction="http://tempuri.org/IService1/zwroc_rase_operacjiResponse")]
+        System.Threading.Tasks.Task<string> zwroc_rase_operacjiAsync(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/dodaj_historie", ReplyAction="http://tempuri.org/IService1/dodaj_historieResponse")]
+        int dodaj_historie(int id, string rasa, System.DateTime data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/dodaj_historie", ReplyAction="http://tempuri.org/IService1/dodaj_historieResponse")]
+        System.Threading.Tasks.Task<int> dodaj_historieAsync(int id, string rasa, System.DateTime data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_date", ReplyAction="http://tempuri.org/IService1/zwroc_dateResponse")]
+        System.DateTime zwroc_date(int var);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/zwroc_date", ReplyAction="http://tempuri.org/IService1/zwroc_dateResponse")]
+        System.Threading.Tasks.Task<System.DateTime> zwroc_dateAsync(int var);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         Frontendowa_aplikacja.ServiceReference1.CompositeType GetDataUsingDataContract(Frontendowa_aplikacja.ServiceReference1.CompositeType composite);
         
@@ -178,6 +208,14 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
         
         public System.Threading.Tasks.Task<int> ile_wierszyAsync() {
             return base.Channel.ile_wierszyAsync();
+        }
+        
+        public int ile_historii() {
+            return base.Channel.ile_historii();
+        }
+        
+        public System.Threading.Tasks.Task<int> ile_historiiAsync() {
+            return base.Channel.ile_historiiAsync();
         }
         
         public int wczytaj_id(int var) {
@@ -250,6 +288,38 @@ namespace Frontendowa_aplikacja.ServiceReference1 {
         
         public System.Threading.Tasks.Task<int> modyfikuj_zwierzakaAsync(int id) {
             return base.Channel.modyfikuj_zwierzakaAsync(id);
+        }
+        
+        public int zwroc_id_operacji(int var) {
+            return base.Channel.zwroc_id_operacji(var);
+        }
+        
+        public System.Threading.Tasks.Task<int> zwroc_id_operacjiAsync(int var) {
+            return base.Channel.zwroc_id_operacjiAsync(var);
+        }
+        
+        public string zwroc_rase_operacji(int var) {
+            return base.Channel.zwroc_rase_operacji(var);
+        }
+        
+        public System.Threading.Tasks.Task<string> zwroc_rase_operacjiAsync(int var) {
+            return base.Channel.zwroc_rase_operacjiAsync(var);
+        }
+        
+        public int dodaj_historie(int id, string rasa, System.DateTime data) {
+            return base.Channel.dodaj_historie(id, rasa, data);
+        }
+        
+        public System.Threading.Tasks.Task<int> dodaj_historieAsync(int id, string rasa, System.DateTime data) {
+            return base.Channel.dodaj_historieAsync(id, rasa, data);
+        }
+        
+        public System.DateTime zwroc_date(int var) {
+            return base.Channel.zwroc_date(var);
+        }
+        
+        public System.Threading.Tasks.Task<System.DateTime> zwroc_dateAsync(int var) {
+            return base.Channel.zwroc_dateAsync(var);
         }
         
         public Frontendowa_aplikacja.ServiceReference1.CompositeType GetDataUsingDataContract(Frontendowa_aplikacja.ServiceReference1.CompositeType composite) {

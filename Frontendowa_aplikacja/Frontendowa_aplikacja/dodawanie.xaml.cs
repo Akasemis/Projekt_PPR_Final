@@ -36,6 +36,7 @@ namespace Frontendowa_aplikacja
             string zdj = zdj_var.Text;
             int opiekun = Int32.Parse(opiekun_var.Text);
             serwer.dodaj_zwierzaka(id, imie, rasa, wiek, kontakt, zdj, opiekun);
+            MessageBox.Show("Dodano zwierzaka!");
         }
     }
 }

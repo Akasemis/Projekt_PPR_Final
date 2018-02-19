@@ -17,6 +17,12 @@ namespace Projekt_PPR
         public string rasa { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? data { get; set; }
+        public DateTime data { get; set; }
+        public void nowa_historia(int ID_operacji, string rasa, DateTime data)
+        {
+            this.ID_operacji = ID_operacji;
+            this.rasa = rasa;
+            this.data = data;
+        }
     }
 }

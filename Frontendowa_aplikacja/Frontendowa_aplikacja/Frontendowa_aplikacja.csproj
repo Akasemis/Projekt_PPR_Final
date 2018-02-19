@@ -60,6 +60,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="historia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,6 +79,9 @@
     </Compile>
     <Compile Include="dodawanie.xaml.cs">
       <DependentUpon>dodawanie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="historia.xaml.cs">
+      <DependentUpon>historia.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -145,6 +152,13 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="zdj\4.jpg" />
+    <Resource Include="zdj\5.jpg" />
+    <Resource Include="zdj\6.jpg" />
+    <Resource Include="zdj\7.jpg" />
+    <Resource Include="zdj\8.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

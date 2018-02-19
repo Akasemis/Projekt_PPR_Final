@@ -12,7 +12,7 @@ namespace Projekt_PPR
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 
-        [StringLength(5)]
+        [StringLength(50)]
         public string imie { get; set; }
 
         [StringLength(50)]

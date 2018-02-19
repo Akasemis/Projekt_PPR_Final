@@ -13,6 +13,12 @@
   <wsdl:message name="IService1_ile_wierszy_OutputMessage">
     <wsdl:part name="parameters" element="tns:ile_wierszyResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_ile_historii_InputMessage">
+    <wsdl:part name="parameters" element="tns:ile_historii" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ile_historii_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ile_historiiResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_wczytaj_id_InputMessage">
     <wsdl:part name="parameters" element="tns:wczytaj_id" />
   </wsdl:message>
@@ -67,6 +73,30 @@
   <wsdl:message name="IService1_modyfikuj_zwierzaka_OutputMessage">
     <wsdl:part name="parameters" element="tns:modyfikuj_zwierzakaResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_zwroc_id_operacji_InputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_id_operacji" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_id_operacji_OutputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_id_operacjiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_rase_operacji_InputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_rase_operacji" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_rase_operacji_OutputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_rase_operacjiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dodaj_historie_InputMessage">
+    <wsdl:part name="parameters" element="tns:dodaj_historie" />
+  </wsdl:message>
+  <wsdl:message name="IService1_dodaj_historie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dodaj_historieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_date_InputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_date" />
+  </wsdl:message>
+  <wsdl:message name="IService1_zwroc_date_OutputMessage">
+    <wsdl:part name="parameters" element="tns:zwroc_dateResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -77,6 +107,10 @@
     <wsdl:operation name="ile_wierszy">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/ile_wierszy" message="tns:IService1_ile_wierszy_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/ile_wierszyResponse" message="tns:IService1_ile_wierszy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ile_historii">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ile_historii" message="tns:IService1_ile_historii_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ile_historiiResponse" message="tns:IService1_ile_historii_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="wczytaj_id">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/wczytaj_id" message="tns:IService1_wczytaj_id_InputMessage" />
@@ -114,6 +148,22 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/modyfikuj_zwierzaka" message="tns:IService1_modyfikuj_zwierzaka_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/modyfikuj_zwierzakaResponse" message="tns:IService1_modyfikuj_zwierzaka_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="zwroc_id_operacji">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/zwroc_id_operacji" message="tns:IService1_zwroc_id_operacji_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/zwroc_id_operacjiResponse" message="tns:IService1_zwroc_id_operacji_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_rase_operacji">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/zwroc_rase_operacji" message="tns:IService1_zwroc_rase_operacji_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/zwroc_rase_operacjiResponse" message="tns:IService1_zwroc_rase_operacji_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dodaj_historie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/dodaj_historie" message="tns:IService1_dodaj_historie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/dodaj_historieResponse" message="tns:IService1_dodaj_historie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_date">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/zwroc_date" message="tns:IService1_zwroc_date_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/zwroc_dateResponse" message="tns:IService1_zwroc_date_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
@@ -123,6 +173,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="ile_wierszy">
       <soap:operation soapAction="http://tempuri.org/IService1/ile_wierszy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ile_historii">
+      <soap:operation soapAction="http://tempuri.org/IService1/ile_historii" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -204,6 +263,42 @@
     </wsdl:operation>
     <wsdl:operation name="modyfikuj_zwierzaka">
       <soap:operation soapAction="http://tempuri.org/IService1/modyfikuj_zwierzaka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_id_operacji">
+      <soap:operation soapAction="http://tempuri.org/IService1/zwroc_id_operacji" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_rase_operacji">
+      <soap:operation soapAction="http://tempuri.org/IService1/zwroc_rase_operacji" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dodaj_historie">
+      <soap:operation soapAction="http://tempuri.org/IService1/dodaj_historie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zwroc_date">
+      <soap:operation soapAction="http://tempuri.org/IService1/zwroc_date" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -120,6 +120,16 @@ namespace Frontendowa_aplikacja
         {
             var serwer = new ServiceReference1.Service1Client();
             serwer.modyfikuj_zwierzaka(stan);
+            int id = serwer.ile_historii()+1;
+            serwer.dodaj_historie(id, serwer.zwroc_rase(stan), DateTime.Now);
+            MessageBox.Show("Adoptowano zwierzaka!");
+            zwierzak_next(sender, e);
+        }
+
+        private void Historia_Click(object sender, RoutedEventArgs e)
+        {
+            historia historia = new historia();
+            historia.Show();
         }
     }
 }

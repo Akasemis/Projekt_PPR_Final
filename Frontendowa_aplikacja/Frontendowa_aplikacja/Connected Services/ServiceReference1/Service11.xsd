@@ -13,6 +13,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ile_historii">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ile_historiiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ile_historiiResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="wczytaj_id">
     <xs:complexType>
       <xs:sequence>
@@ -142,6 +154,64 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="modyfikuj_zwierzakaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_id_operacji">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="var" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_id_operacjiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zwroc_id_operacjiResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_rase_operacji">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="var" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_rase_operacjiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zwroc_rase_operacjiResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dodaj_historie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="rasa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dodaj_historieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dodaj_historieResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_date">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="var" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="zwroc_dateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zwroc_dateResult" type="xs:dateTime" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
