@@ -9,6 +9,15 @@ namespace Projekt_PPR
     [Table("Opiekunowie")]
     public partial class Opiekunowie
     {
+        public Opiekunowie()
+        {
+            ID_opiekuna = 3;
+            imie = "Test";
+            nazwisko = "Testowy";
+            pensja = 1000;
+        }
+
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID_opiekuna { get; set; }
@@ -28,6 +37,11 @@ namespace Projekt_PPR
             this.imie = imie;
             this.nazwisko = nazwisko;
             this.pensja = pensja;
+        }
+
+        public void modyfikuj_pensje (int kwota)
+        {
+            this.pensja = this.pensja + kwota;
         }
     }
 }

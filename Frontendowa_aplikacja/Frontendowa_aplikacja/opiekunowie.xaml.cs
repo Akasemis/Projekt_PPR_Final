@@ -36,14 +36,30 @@ namespace Frontendowa_aplikacja
             var serwer = new ServiceReference1.Service1Client();
             int id = Int32.Parse(id_var.Text);
             int dodatek = Int32.Parse(dodatek_var.Text);
-            serwer.modyfikuj_pensje(id, dodatek);
-            MessageBox.Show("Zmodyfikowano pensje pracownika!");
-            opiekunowie_t.Text = "";
-            int stan = 1;
-            while (stan <= serwer.ile_opieuknow())
+            if (id > serwer.ile_opieuknow())
             {
-                opiekunowie_t.Text += serwer.zwroc_id_opiekuna(stan) + " " + serwer.zwroc_imie_opiekuna(stan) + " " + serwer.zwroc_nazwisko_opiekuna(stan) + " " + serwer.zwroc_pensje_opiekuna(stan) + "zł \n";
-                stan++;
+                MessageBox.Show("Niepoprawne id!");
+            }
+            else
+            {
+                serwer.modyfikuj_pensje(id, dodatek);
+                MessageBox.Show("Zmodyfikowano pensje pracownika!");
+                opiekunowie_t.Text = "";
+                int stan = 1;
+                while (stan <= serwer.ile_opieuknow())
+                {
+                    opiekunowie_t.Text += serwer.zwroc_id_opiekuna(stan) + " " + serwer.zwroc_imie_opiekuna(stan) + " " + serwer.zwroc_nazwisko_opiekuna(stan) + " " + serwer.zwroc_pensje_opiekuna(stan) + "zł \n";
+                    stan++;
+                }
+            }
+        }
+
+        private void id_var_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(id_var.Text, "[^1-9]"))
+            {
+                MessageBox.Show("Podaj prawidłową liczbę!");
+                id_var.Text = id_var.Text.Remove(id_var.Text.Length - 1);
             }
         }
     }
